@@ -178,3 +178,5 @@ ALLOWED_HOSTS = ['127.0.0.1']
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
+ALLOWED_HOSTS = ['.vercel.app', 'localhost']
+
