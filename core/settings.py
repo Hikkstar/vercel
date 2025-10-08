@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+
+import dj_database_url
 import os
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'dummysecret')
@@ -173,3 +175,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # settings.py
 
 ALLOWED_HOSTS = ['127.0.0.1']
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+}
